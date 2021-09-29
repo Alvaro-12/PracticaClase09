@@ -1,0 +1,28 @@
+﻿@model Practiva.Models.Persona
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Index", "Persona", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.Nombre)
+    @Html.TextBoxFor(m => m.Nombre)
+    @Html.ValidationMessageFor(m => m.Nombre)
+    <br>
+    @Html.LabelFor(m => m.Edad)
+    @Html.TextBoxFor(m => m.Edad)
+    @Html.ValidationMessageFor(m => m.Edad)
+    <br>
+    @Html.LabelFor(m => m.Sexo)
+    @Html.TextBoxFor(m => m.Sexo)
+    @Html.ValidationMessageFor(m => m.Sexo)
+    <br>
+    @Html.LabelFor(m => m.NivelEducativo)
+    @Html.TextBoxFor(m => m.NivelEducativo)
+    @Html.ValidationMessageFor(m => m.NivelEducativo)
+    <br>
+    <input type="submit" value="Envio de informacion">
+}
